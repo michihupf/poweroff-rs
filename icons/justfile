@@ -1,0 +1,15 @@
+icon_dir := "/usr/share/icons/hicolor"
+sub_dir := "scalable/apps"
+
+install:
+    cp scalable/poweroff-rs.svg {{icon_dir}}/{{sub_dir}}/poweroff-rs-symbolic.svg
+
+    # update icon cache
+    gtk-update-icon-cache -f -t {{icon_dir}}
+
+uninstall:
+    rm {{icon_dir}}/{{sub_dir}}/poweroff-rs-symbolic.svg
+
+    # update icon cache
+    gtk-update-icon-cache -f -t {{icon_dir}}
+

@@ -1,0 +1,23 @@
+body {
+  --bg-color: #141412;
+  --fg-color: #e5e0c9;
+  background: var(--bg-color);
+}
+
+title {
+ color: var(--fg-color);
+ font-size: 24pt;
+ font-weight: bold;
+}
+
+.pbtn {
+  outline: none;
+  border: 1px solid var(--fg-color);
+  color: var(--fg-color);
+  background: var(--bg-color);
+  -gtk-icon-size: 50%;
+}
+
+.pbtn:hover {
+  background: #242424;
+}

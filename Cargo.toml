@@ -1,0 +1,9 @@
+[package]
+name = "poweroff-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gtk4 = "0.9.4"
+ron = "0.8.1"
+serde = { version = "1.0.215", features = ["derive"] }

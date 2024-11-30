@@ -1,0 +1,14 @@
+Config(
+    // Title of the window.
+    title: "poweroff-rs",
+    // Width of the window. default 512
+    width: 512,
+    // Height of the window. default 200
+    height: 200,
+    // Keybinds to click (l)eft, (c)enter and (r)ight button.
+    bindp: "s",
+    bindr: "r",
+    bindw: "w",
+    // Windows boot entry.
+    wbentry: 2,
+)
