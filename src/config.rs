@@ -44,6 +44,8 @@ pub struct Config {
     pub bindr: String,
     /// Keybind for bootwin button.
     pub bindw: String,
+    /// Keybind for quitting the app.
+    pub bindq: String,
     /// Windows boot entry (replaces $ENTRY variable).
     pub wbentry: u8,
 }

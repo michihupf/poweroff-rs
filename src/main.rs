@@ -19,6 +19,7 @@ fn main() -> glib::ExitCode {
     app.set_accels_for_action("win.poweroff", &[config.bindp.as_str()]);
     app.set_accels_for_action("win.reboot", &[config.bindr.as_str()]);
     app.set_accels_for_action("win.bootwin", &[config.bindw.as_str()]);
+    app.set_accels_for_action("win.cancel", &[config.bindq.as_str()]);
 
     app.run()
 }
@@ -121,9 +122,15 @@ fn build_ui(app: &Application) {
 
     let action_poweroff = gtk_action!(Action::Poweroff, "poweroff");
     let action_reboot = gtk_action!(Action::Reboot, "reboot");
-    let action_winreboot = gtk_action!(Action::BootWindows(config.wbentry), "bootwin");
+    let action_winboot = gtk_action!(Action::BootWindows(config.wbentry), "bootwin");
+    let action_quit = ActionEntryBuilder::new("cancel")
+        .activate(move |window: &ApplicationWindow, _, _| {
+            println!("Closing window!");
+            window.close();
+        })
+        .build();
 
-    window.add_action_entries([action_poweroff, action_reboot, action_winreboot]);
+    window.add_action_entries([action_poweroff, action_reboot, action_winboot, action_quit]);
 
     container.append(&btn_ctn);
     window.set_child(Some(&container));

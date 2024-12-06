@@ -5,10 +5,15 @@ Config(
     width: 512,
     // Height of the window. default 200
     height: 200,
-    // Keybinds to click (l)eft, (c)enter and (r)ight button.
+    // Keybinds to perform actions.
+    // (S)hut down
+    // (R)eboot
+    // (W)indows Boot
+    // (Q)uit the app
     bindp: "s",
     bindr: "r",
     bindw: "w",
+    bindq: "q",
     // Windows boot entry.
     wbentry: 2,
 )
